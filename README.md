@@ -40,7 +40,7 @@ Indication is split using get dummy and is then merged to the data frame along w
 
 ### Model Selection
 
-<h3>Multi-Layer Perceptron<h3>
+Multi-Layer Perceptron
 Multilayer perceptron refers to a neural network with at least three layers of nodes, an input layer, some number of intermediate layers, and an output layer. Each node in a given layer is connected to every node in the adjacent layers.
 A perceptron is meant to simulate a neuron in that it receives inputs like signals that are received by dendrites. Inputs are then processed, this is the cell processing the signals. A output is then created. The output is then received by the next neuron like a dendrite. These neurons are set up as a network. The input layer, hidden layer and the output layer. The hidden layer acts as a distillation layer that distills the patterns that are important from the inputs and sends it to the next layer.
 
