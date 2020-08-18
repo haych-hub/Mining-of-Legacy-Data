@@ -10,7 +10,7 @@
 
 <h2>Methodology</h2>
 
-Business Understanding
+<h3>Business Understanding</h3>
 The first step to be undertaken in the project was business understanding of the data. The sample given was medical data with 11 columns. The first 10 columns would be used to predict the label value using a machine learning model. Looking at the data types of the data, Random and IPSI was a float64, Id was a int and the rest were objects. A model would be chosen and created to take a sample of this data and then predict the label of the test data.
 
 <h3>Data Understanding</h3>
