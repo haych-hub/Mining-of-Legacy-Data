@@ -38,9 +38,26 @@ Using the magic command time it each value that is no in the data frame is repla
 Indication is split using get dummy and is then merged to the data frame along with label.
 
 
-### Markdown
+### Model Selection
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<h3>Multi-Layer Perceptron<h3>
+Multilayer perceptron refers to a neural network with at least three layers of nodes, an input layer, some number of intermediate layers, and an output layer. Each node in a given layer is connected to every node in the adjacent layers.
+A perceptron is meant to simulate a neuron in that it receives inputs like signals that are received by dendrites. Inputs are then processed, this is the cell processing the signals. A output is then created. The output is then received by the next neuron like a dendrite. These neurons are set up as a network. The input layer, hidden layer and the output layer. The hidden layer acts as a distillation layer that distills the patterns that are important from the inputs and sends it to the next layer.
+
+<h3>Modelling</h3>
+The data has to be split between what is being tested and what is being predicted. Thus the X value is assigned to the data of the first 10 columns and the last column, label, is assigned to y.
+The original dataset should be split up into training and testing data. 70% of the data is to used for training and the remaining 30% will be used for testing the models ability to predict the label of the data. The data is split so that there is data for the model to be evaluated on to see how well the model performs on unseen data. Test data has to remain unseen by the model. A scaler is initialized to scale the data so it can easily be fed into the model. The data to be trained and the data to be tested is then scaled. MLP is imported and a class is initialized to set it up. Using fit the model is trained on the x train and y train values. Using predict the model uses the training data to predict the y values of the test data. Using metrics from sklearn classification report and confusion matrix is imported to get an understanding of the performance of the model. A confusion matrix also known as error matrix is a predictor of model performance on a classification problem.
+After importing them a classification report is created and a confusion matrix. This outputs the results of the model as a confusion matrix and gives the precision, recall, f1-score and support of the values predicted. The precision is the ratio tp / (tp + fp) where tp is the number of true positives and fp the number of false positives. The precision is intuitively the ability of the classifier not to label as positive a sample that is negative. The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. The recall is intuitively the ability of the classifier to find all the positive samples. The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0. The accuracy score of this initial model fluctuates around 0.88.
+Evaluation
+When preparing the data for the model the two columns for ASX were not dealt with properly as this is a clear problem which may affect the performance. Testing different iterations for the value showed that 1000 iterations is the optimum amount as any higher or lower reduce the accuracy.
+Data Understanding
+Asx and Asx have been entered as separate and unique values and this was likely a human error so the two columns combining would have a positive effect on the data.
+Data Preparation
+After creating a dummy of indication another column is created called ASX that add the two ASX variables together and then merges with the rest of the data frame after removing the redundant columns. The column is tested using value counts to not have lost any values in the transition.
+Modelling
+A new multi-layer perceptron is created after X value uses the combined values of ASX now. Running the model on the data again the model outputs an accuracy result of around 0.92. The model is teste for the best number of layers.
+Evaluation
+The accuracy of the data has improved slightly. The best layers are 10, 10,10 for the model. The model needs to be tested for the optimum test size.
 
 ```markdown
 Syntax highlighted code block
