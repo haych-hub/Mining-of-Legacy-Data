@@ -161,6 +161,7 @@ will include the steps on how to perform it in real life.
 <img src="results2.jpg" alt="result">
 
 1: Without Contra and IPSI values added to the training data
+
 2: With Contra and IPSI added to the training data
 Evaluation &
 
