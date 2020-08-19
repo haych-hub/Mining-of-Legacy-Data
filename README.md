@@ -13,6 +13,14 @@
 <h3>Business Understanding</h3>
 The first step to be undertaken in the project was business understanding of the data. The sample given was medical data with 11 columns. The first 10 columns would be used to predict the label value using a machine learning model. Looking at the data types of the data, Random and IPSI was a float64, Id was a int and the rest were objects. A model would be chosen and created to take a sample of this data and then predict the label of the test data.
 
+<h2>Requirements</h2>
+• Provide a detailed analysis of the chosen models used in my project
+• Justify the reasons of the data preparation process and why I have done it this way.
+• Take samples of the data attributes and find a link between them and patients being
+at risk
+• Present my results and review my finings to critical analysis how my methodology
+was appropriate for this project.
+
 <h3>Data Understanding</h3>
 Doing a cat plot of label with a hue of each data column, the data was visualized. The data showed that patients with diabetes were more likely to be at risk than those without. Those with diabetes and not at risk was very small. There was also a bar for unknown suggesting that the data had to be cleaned.
 A visualization of IPSI using cat plot showed that those at risk generally had higher IPSI but were also distributed sparsely along lower values. Those not at risk had the highest count near the median.
@@ -87,7 +95,7 @@ This model works better than a decision tree model if the signal to noise ratio 
 Modelling
 The logistic regression performs similarly to decision trees in regards to accuracy but has a much high specificity of 0.82 and sensitivity of 0.97.
 
-Support Vector Machine
+## Support Vector Machine
 
 Support Vector Machine” is a supervised machine learning algorithm which can be used for both classification or regression challenges. In the algorithm each data item is plotted as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Classification is done to fine a hyper-plane which differentiates the data distinctly.
 Modelling
@@ -116,29 +124,21 @@ Modelling
 Each model is tested with the new data and metrics are taken and assigned to a data frame for better comparison with the first result being without contra and IPSI added to the data samples.
 
 # Results
-<img src="C:\Users\Burberry Harry\Documents\CV\results.jpg" alt="img_results">
+<img src="results.jpg" alt="result">
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Evaluation & Discussion
 
-**Bold** and _Italic_ and `Code` text
+I did not take accuracy into the evaluation as specificity and sensitivity are more important metrics to determine the performance of the deployed model in this field.
+For the multi-layer perceptron adding Contra and IPSI has improved its specificity. Over all it can be said the second data set for MLP is an improvement thus the new values were useful to it.
+KNN seems to suffer in performance in the second data sets performing better when it does not have Contra and IPSI to deal with.
+Decision Tree model is not really affected by the second data set that much fluctuating regularly.
+The second dataset clearly shows an improvement in performance of SVM.
+Logistic regression however suffered from the additional data , clearly performing worse with the second data set.
+The models could have benefited from focus on a smaller amount and fine tuning them to optimize them better rather than testing out many models and comparing which one is the best to use.
+Overall the best performing model is one that can use all the data which includes the Contra and IPSI values and doesn’t suffer from using it. That would be MLP as its specificity increases reducing its likelihood of reporting a false positive as that is important in the medical section as false alarms would cost a lot of money to test for and put pressure on health care services. Its sensitivity is also very high and improves with the second data set. The second best would be support vector machine as the performance increases with the additional data set and it has a very high specificity reducing false alarms but its sensitivity is low meaning it is not good at detecting risk compared to MLP thus MLP is the best model to use for this problem.
 
-[Link](url) and ![Image](src)
-```
+At each stage of the methodology, I felt like I followed the processes and kept referring back to it to make sure I wasn’t going wrong. Reflecting on it there are a couple of improvements I would have made. The first would have been understanding the data more. This would have been looking more into the raw data to find any trends and patterns in the data frame. Another would be to create more visualization on the data frame and explore the different columns against each other to find a correlation. In Data preparation, instead of dropping the data I would have calculated the mean of the column and repair the Null values with fillna(). This would have worked better as dropping rows can affect the whole dataset. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/haych-hub/Mining-of-Legacy-Data/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Thank you for reading. Contact me at **Email:harry.akuoko@gmail.com** for any questions.
