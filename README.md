@@ -13,13 +13,11 @@
 <h3>Business Understanding</h3>
 The first step to be undertaken in the project was business understanding of the data. The sample given was medical data with 11 columns. The first 10 columns would be used to predict the label value using a machine learning model. Looking at the data types of the data, Random and IPSI was a float64, Id was a int and the rest were objects. A model would be chosen and created to take a sample of this data and then predict the label of the test data.
 
-<h2>Requirements</h2>
-• Provide a detailed analysis of the chosen models used in my project
-• Justify the reasons of the data preparation process and why I have done it this way.
-• Take samples of the data attributes and find a link between them and patients being
-at risk
-• Present my results and review my finings to critical analysis how my methodology
-was appropriate for this project.
+<h3>Requirements</h3>
+- Provide a detailed analysis of the chosen models used in my project
+- Justify the reasons of the data preparation process and why I have done it this way.
+- Take samples of the data attributes and find a link between them and patients being at risk
+- Present my results and review my finings to critical analysis how my methodology was appropriate for this project.
 
 <h3>Data Understanding</h3>
 Doing a cat plot of label with a hue of each data column, the data was visualized. The data showed that patients with diabetes were more likely to be at risk than those without. Those with diabetes and not at risk was very small. There was also a bar for unknown suggesting that the data had to be cleaned.
