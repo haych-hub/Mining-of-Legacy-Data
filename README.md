@@ -23,6 +23,8 @@ The first step to be undertaken in the project was business understanding of the
 - Present my results and review my finings to critical analysis how my methodology was appropriate for this project.
 
 <h3>Data Understanding</h3>
+The dataset contains two attributes which are unique to the patients. But there is one attribute missing name Session. Six attributes in the dataset which are Boolean yes/no, two values (Nominal). Two more attributes which are percentage figure [0-100]. These fields satisfy the data required to be used in this process. But I noticed some problems with it, when looking at the data type Contra was labelled as an object. For Contra and IPSI these are inclusive integer ranges. Lastly, the label is either Risk or No risk. This will determine if a patient is at risk from the previous attributes in the dataset. In total there is 12 data field, but one is missing. Each field gives relevant information on the type of condition a patient may have.
+
 Doing a cat plot of label with a hue of each data column, the data was visualized. The data showed that patients with diabetes were more likely to be at risk than those without. Those with diabetes and not at risk was very small. There was also a bar for unknown suggesting that the data had to be cleaned.
 A visualization of IPSI using cat plot showed that those at risk generally had higher IPSI but were also distributed sparsely along lower values. Those not at risk had the highest count near the median.
 Indication showed that it also had null or unknown values. ASX is split into two columns because each spelling of the entry is treated as a unique entry. This would have to be fixed in data preparation. The entries that had TIA were more likely to not be at risk than they were to be at risk.
@@ -124,6 +126,10 @@ Using the new Contra and IPSI values added to the data frames the old models nee
 **Modelling**
 Each model is tested with the new data and metrics are taken and assigned to a data frame for better comparison with the first result being without contra and IPSI added to the data samples.
 
+<h3>Deployment</h3>
+In this stage, I want to take the evaluation results and use this to determine a strategy for deployment. The relevant models have been created and are ready for deployment. For this to be a success it has to be approved and meet the project requirement for it to be a success. This deployment plan is summarised and uses deployment strategy which
+will include the steps on how to perform it in real life.
+
 # Results
 <img src="results.jpg" alt="result">
 
@@ -138,7 +144,9 @@ Decision Tree model is not really affected by the second data set that much fluc
 The second dataset clearly shows an improvement in performance of SVM.
 Logistic regression however suffered from the additional data , clearly performing worse with the second data set.
 The models could have benefited from focus on a smaller amount and fine tuning them to optimize them better rather than testing out many models and comparing which one is the best to use.
-Overall the best performing model is one that can use all the data which includes the Contra and IPSI values and doesn’t suffer from using it. That would be MLP as its specificity increases reducing its likelihood of reporting a false positive as that is important in the medical section as false alarms would cost a lot of money to test for and put pressure on health care services. Its sensitivity is also very high and improves with the second data set. The second best would be support vector machine as the performance increases with the additional data set and it has a very high specificity reducing false alarms but its sensitivity is low meaning it is not good at detecting risk compared to MLP thus MLP is the best model to use for this problem.
+ROC Curve is used to plot the true positive rate against the false-positive rate. It shows sensitivity and specificity. In the results, I have plotted false positive rate as X and true positives as y and these values are between 0.0 and 1.0. This graph predicts my binary outcome. ROC is used to evaluate model performance. The graph represents a high specificity. A high rate of specificity means a high value of true negative and lower false positive. This graph has a high level of specificity which means a proportion of people do not suffer from the disease who got predicted correctly. 
+
+Overall the best performing model is one that can use all the data which includes the Contra and IPSI values and doesn’t suffer from using it. That would be MLP as its specificity increases reducing its likelihood of reporting a false positive as that is important in the medical section as false alarms would cost a lot of money to test for and put pressure on health care services. Its sensitivity is also very high and improves with the second data set. The second best would be support vector machine as the performance increases with the additional data set and it has a very high specificity reducing false alarms but its sensitivity is low meaning it is not good at detecting risk compared to MLP thus MLP is the best model to use for this problem. 
 
 At each stage of the methodology, I felt like I followed the processes and kept referring back to it to make sure I wasn’t going wrong. Reflecting on it there are a couple of improvements I would have made. The first would have been understanding the data more. This would have been looking more into the raw data to find any trends and patterns in the data frame. Another would be to create more visualization on the data frame and explore the different columns against each other to find a correlation. In Data preparation, instead of dropping the data I would have calculated the mean of the column and repair the Null values with fillna(). This would have worked better as dropping rows can affect the whole dataset. 
 
