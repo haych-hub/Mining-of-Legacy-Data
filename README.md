@@ -15,8 +15,11 @@ The first step to be undertaken in the project was business understanding of the
 
 <h3>Requirements</h3>
 - Provide a detailed analysis of the chosen models used in my project
+
 - Justify the reasons of the data preparation process and why I have done it this way.
+
 - Take samples of the data attributes and find a link between them and patients being at risk
+
 - Present my results and review my finings to critical analysis how my methodology was appropriate for this project.
 
 <h3>Data Understanding</h3>
