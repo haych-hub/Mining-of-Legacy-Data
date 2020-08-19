@@ -116,8 +116,7 @@ Modelling
 Each model is tested with the new data and metrics are taken and assigned to a data frame for better comparison with the first result being without contra and IPSI added to the data samples.
 
 # Results
-```markdown
-Syntax highlighted code block
+<img src="results.jpg" alt="img_results">
 
 # Header 1
 ## Header 2
