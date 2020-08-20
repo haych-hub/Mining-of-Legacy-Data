@@ -179,4 +179,6 @@ Overall the best performing model is one that can use all the data which include
 
 At each stage of the methodology, I felt like I followed the processes and kept referring back to it to make sure I wasn’t going wrong. Reflecting on it there are a couple of improvements I would have made. The first would have been understanding the data more. This would have been looking more into the raw data to find any trends and patterns in the data frame. Another would be to create more visualization on the data frame and explore the different columns against each other to find a correlation. In Data preparation, instead of dropping the data I would have calculated the mean of the column and repair the Null values with fillna(). This would have worked better as dropping rows can affect the whole dataset. 
 
+Link to dataset used <img src="CV_dataset.csv" alt="Dataset_download">
+
 Thank you for reading. Contact me at **Email:harry.akuoko@gmail.com** for any questions.
