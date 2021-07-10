@@ -2,7 +2,7 @@
 
 <h3> Description of the task. </h3>
 
-- Introduction: Practical experience in handling a data-mining project using industry tooling for legacy data. The Data provided as part of this assessment is from the domain of cardio vascular medicine. The work herein requires the description and analysis of data for the given domain, including manipulation of data in various forms, as well as creation of classifiers
+- Introduction: Practical experience in handling a data-mining project using industry tooling for legacy data. The Data provided as part of this assessment is from the domain of cardiovascular medicine. The work requires the description and analysis of data for the given domain, including manipulation of data in various forms, as well as creation of classifiers
 
 - Software: Python and Jupyter
 
